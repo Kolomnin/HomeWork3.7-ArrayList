@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="506ba944-7a91-4d04-acaa-2b5abc4f4c57" name="Changes" comment="second commit. hw 3.9 is done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw7/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw7/arraylist/IntegerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw7/arraylist/IntegerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/arraylist/IntegerListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/arraylist/IntegerListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/arraylist/IntegerListTestWithInvalidData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/arraylist/IntegerListTestWithInvalidData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +26,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw9" />
+        <entry key="$PROJECT_DIR$" value="hw8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6d5a1435-1b66-4b5a-afb7-023871ee7a88" />
+        <option name="url" value="https://github.com/Kolomnin/HomeWork3.7-ArrayList.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,7 +78,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.IntegerListTestWithInvalidData">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hw7.Main" />
       <module name="HomeWork3.7-ArrayList" />
@@ -86,6 +102,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="arraylist" />
       <option name="MAIN_CLASS_NAME" value="arraylist.IntegerListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegerListTestWithInvalidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWork3.7-ArrayList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="arraylist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="arraylist" />
+      <option name="MAIN_CLASS_NAME" value="arraylist.IntegerListTestWithInvalidData" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,28 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringListTestWithInvalidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWork3.7-ArrayList" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="arraylist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="arraylist" />
-      <option name="MAIN_CLASS_NAME" value="arraylist.StringListTestWithInvalidData" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.IntegerListTestWithInvalidData" />
         <item itemvalue="JUnit.IntegerListTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.IntegerListTest.containsTrue" />
         <item itemvalue="JUnit.StringListTest" />
-        <item itemvalue="JUnit.StringListTestWithInvalidData" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670415833481</updated>
       <workItem from="1670415834619" duration="9084000" />
-      <workItem from="1670500109560" duration="318000" />
+      <workItem from="1670500109560" duration="2885000" />
     </task>
     <task id="LOCAL-00001" summary="first commit. hw 3.7 is done.">
       <created>1670436642239</created>
@@ -179,11 +195,29 @@
       <option name="project" value="LOCAL" />
       <updated>1670500174020</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="second commit. hw 3.9 is done.">
+      <created>1670500572799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670500572799</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit. hw 3.7 is done." />

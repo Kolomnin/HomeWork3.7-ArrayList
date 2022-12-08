@@ -21,7 +21,7 @@ public class IntegerList implements IntegerListInterface {
         return add(size, item);
     }
 
-    private void grow() {
+    private void increase() {
         capacity += (capacity / 2 + 1);
         Integer[] temp = new Integer[capacity];
         System.arraycopy(array, 0, temp, 0, size);
@@ -33,7 +33,7 @@ public class IntegerList implements IntegerListInterface {
         validateIndex(index);
         validateItem(item);
         if (capacity <= size) {
-            grow();
+            increase();
         }
         int i;
         for (i = size; i > index; i--) {
@@ -79,7 +79,7 @@ public class IntegerList implements IntegerListInterface {
 
     @Override
     public boolean contains(Integer item) {
-        quickSort(array, 0, array.length - 1);
+        sortSelection();
         return binarySearch(item);
     }
 
@@ -158,35 +158,18 @@ public class IntegerList implements IntegerListInterface {
         return false;
     }
 
-    public static void quickSort(Integer[] arr, int begin, int end) {
-        if (begin < end) {
-            int partitionIndex = partition(arr, begin, end);
-
-            quickSort(arr, begin, partitionIndex - 1);
-            quickSort(arr, partitionIndex + 1, end);
-        }
-    }
-
-    private static int partition(Integer[] arr, int begin, int end) {
-        int pivot = arr[end];
-        int i = (begin - 1);
-
-        for (int j = begin; j < end; j++) {
-            if (arr[j] <= pivot) {
-                i++;
-
-                swapElements(arr, i, j);
+    private void sortSelection() {
+        for (int i = 0; i < size - 1; i++) {
+            int minElementIndex = i;
+            for (int j = i + 1; j < size; j++) {
+                if (array[j] < array[minElementIndex]) {
+                    minElementIndex = j;
+                }
             }
+            Integer temp = array[i];
+            array[i] = array[minElementIndex];
+            array[minElementIndex] = temp;
         }
-
-        swapElements(arr, i + 1, end);
-        return i + 1;
-    }
-
-    private static void swapElements(Integer[] arr, int indexA, int indexB) {
-        int tmp = arr[indexA];
-        arr[indexA] = arr[indexB];
-        arr[indexB] = tmp;
     }
 
     private void validateIndex(int index) {

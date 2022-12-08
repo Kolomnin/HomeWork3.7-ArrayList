@@ -15,11 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class IntegerListTest {
+
+class IntegerListTest {
     private IntegerList integerList;
     private final static Integer FIRST = 12;
     private final static Integer SECOND = 20;
-    private final static Integer EXCEPTED = 90;
+    private final static Integer EXCEPTED = 99;
 
 
     @BeforeEach
@@ -34,7 +35,7 @@ public class IntegerListTest {
         try {
             Field field = IntegerList.class.getDeclaredField("capacity");
             field.setAccessible(true);
-            Method method = IntegerList.class.getDeclaredMethod("grow");
+            Method method = IntegerList.class.getDeclaredMethod("increase", null);
             method.setAccessible(true);
             method.invoke(integerList);
             assertEquals(5, field.getInt(integerList));
@@ -176,19 +177,18 @@ public class IntegerListTest {
     }
 
     @Test
-    void sort() {
+    void sortSelection() {
         Integer[] excepted = new Integer[]{FIRST, SECOND, EXCEPTED};
         integerList.add(0, EXCEPTED);
-        Integer[] arr = integerList.toArray();
         try {
-            Method method = IntegerList.class.getDeclaredMethod("quickSort", Integer[].class, int.class, int.class);
+            Method method = IntegerList.class.getDeclaredMethod("sortSelection");
             method.setAccessible(true);
-            method.invoke(integerList, arr, 0, arr.length - 1);
+            method.invoke(integerList);
         } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-        assertArrayEquals(excepted, arr);
+        assertArrayEquals(excepted, integerList.toArray());
     }
 
     @Test

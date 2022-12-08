@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class IntegerListTestWithInvalidData {
     private IntegerList integerList;
     private final static Integer FIRST = 10;
-    private final static Integer CASUAL = 72;
+    private final static Integer CASUAL = 99;
 
     @BeforeEach
     void setUp() {
